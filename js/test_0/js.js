@@ -75,39 +75,33 @@ function thirdPart() {
 const calc = {
     doSomething(action, a, b) {
         let res = 0
+        const parsedA = parseInt(a);
+        const parsedB = parseInt(b);
+
+        if (isNaN(parsedA)) {
+             return "В первом поле не число"
+        }
+
+        if (isNaN(parsedB)) {
+            return "Во втором поле не число"
+        }
 
         switch (action) {
             case "+":
-                res = this.sum(a, b);
+                res = parsedA + parsedB;
                 break;
             case "-":
-                res = this.sub(a, b);
+                res = parsedA - parsedB;
                 break;
             case "*":
-                res = this.mul(a, b);
+                res = parsedA * parsedB;
                 break;
             case "/":
-                res = this.div(a, b);
+                res = parsedA / parsedB;
                 break;
         }
 
         return res;
-    },
-
-    sub(a, b) {
-        return parseInt(a) - parseInt(b);
-    },
-
-    sum(a, b) {
-        return parseInt(a) + parseInt(b);
-    },
-
-    mul(a, b) {
-        return parseInt(a) * parseInt(b);
-    },
-
-    div(a, b) {
-        return parseInt(a) / parseInt(b);
     }
 }
 
