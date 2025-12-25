@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приветствие</title>
+    <link rel="stylesheet" href="{% static 'practice_app/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Введите ваше имя</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Отправить</button>
+        </form>
+        {% if greeting %}
+            <h2>{{ greeting }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
