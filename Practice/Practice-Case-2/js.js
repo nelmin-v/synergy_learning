@@ -9,18 +9,27 @@ window.onload = function () {
     minusBtn.addEventListener('click', minus);
 }
 
+/**
+ * Функция суммы
+ */
 function plus() {
     // console.log('!!!!!!!!!!! +++ ');
     const currentValue = getCurrentValue();
     setCurrentValue(currentValue + 1);
 }
 
+/**
+ * Функция разности
+ */
 function minus() {
     // console.log('!!!!!!!!!!! --- ');
     const currentValue = getCurrentValue();
     setCurrentValue(currentValue - 1);
 }
 
+/**
+ * @returns текущее значение
+ */
 function getCurrentValue() {
     const resultElement = getResultElement();
     return Number.parseInt(resultElement.textContent);
@@ -67,12 +76,15 @@ function setCurrentValue(value) {
     }
 }
 
+/**
+ * @returns Элемент с результатом
+ */
 function getResultElement() {
     return document.getElementById('result');
 }
 
 /**
- * Показать текст
+ * Показать текст ошибки
  */
 function setVisibilityResultTestBlock(value) {
     const block = document.getElementById('result-text');

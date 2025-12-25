@@ -10,6 +10,11 @@ window.onload = function () {
     divideBtn.addEventListener('click', () => calculate("divide"))
 }
 
+/**
+ * Функция калькулятора
+ *
+ * @param operation операция (sum/subtract/multiply/divide)
+ */
 function calculate(operation) {
     const input1 = document.getElementById('input1').value;
     const input2 = document.getElementById('input2').value;
@@ -22,7 +27,7 @@ function calculate(operation) {
     const num2 = parseFloat(input2);
 
     if (isNaN(num1) || isNaN(num2)) {
-        resultDiv.classList.add('error'); // Добавляем класс ошибки
+        resultDiv.classList.add('error');
         resultDiv.innerHTML = "Ошибка: Введите действительные числа.";
         return;
     }
