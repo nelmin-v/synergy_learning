@@ -1,8 +1,8 @@
 window.onload = function () {
-    const sumBtn =  document.getElementById('sum-btn');
-    const subtractBtn =  document.getElementById('subtract-btn');
-    const multiplyBtn =  document.getElementById('multiply-btn');
-    const divideBtn =  document.getElementById('divide-btn');
+    const sumBtn = document.getElementById('sum-btn');
+    const subtractBtn = document.getElementById('subtract-btn');
+    const multiplyBtn = document.getElementById('multiply-btn');
+    const divideBtn = document.getElementById('divide-btn');
 
     sumBtn.addEventListener('click', () => calculate("sum"))
     subtractBtn.addEventListener('click', () => calculate("subtract"))
