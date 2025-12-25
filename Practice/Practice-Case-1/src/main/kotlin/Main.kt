@@ -5,11 +5,15 @@ import java.util.Locale
 
 fun main() {
     print("Введите день рождения (DD): ")
-    val day = readln().toInt()
+    val day = readLine()?.toInt()
     print("Введите месяц рождения (MM): ")
-    val month = readln().toInt()
+    val month = readLine()?.toInt()
     print("Введите год рождения (YYYY): ")
-    val year = readln().toInt()
+    val year = readLine()?.toInt()
+
+    if (day == null || month == null || year == null) {
+        throw Exception("Не верный ввод")
+    }
 
     val birthDate = LocalDate.of(year, month, day)
 
