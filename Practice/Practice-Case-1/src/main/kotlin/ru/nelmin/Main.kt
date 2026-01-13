@@ -1,14 +1,16 @@
+package ru.nelmin
+
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 import java.util.Locale
 
-fun main() {
-    print("Введите день рождения (DD): ")
+fun main(args: Array<String>) {
+    println("Введите день рождения (DD): ")
     val day = readLine()?.toInt()
-    print("Введите месяц рождения (MM): ")
+    println("Введите месяц рождения (MM): ")
     val month = readLine()?.toInt()
-    print("Введите год рождения (YYYY): ")
+    println("Введите год рождения (YYYY): ")
     val year = readLine()?.toInt()
 
     if (day == null || month == null || year == null) {

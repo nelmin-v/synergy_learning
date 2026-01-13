@@ -1,10 +1,11 @@
 plugins {
     kotlin("jvm") version "2.2.21"
+    id("com.github.johnrengelman.shadow") version "7.1.0"
     id("application")
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("ru.nelmin.MainKt")
 }
 
 group = "com.nelmin"
@@ -15,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("stdlib"))
     testImplementation(kotlin("test"))
 }
 
@@ -30,3 +32,10 @@ tasks.named<JavaExec>("run") {
     standardInput = System.`in`
 }
 
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "ru.nelmin.MainKt"
+        )
+    }
+}
