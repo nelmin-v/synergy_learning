@@ -1,4 +1,4 @@
-# greetings_app/forms.py
+# practice_app/forms.py
 from django import forms
 
 class NameForm(forms.Form):
